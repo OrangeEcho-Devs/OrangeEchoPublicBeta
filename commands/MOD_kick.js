@@ -1,4 +1,5 @@
 const { prefix } = require('../config.json');
+const channel = message.channel
 
 module.exports = {
 	name: 'kick',
