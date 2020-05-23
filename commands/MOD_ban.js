@@ -10,7 +10,7 @@ module.exports = {
 			//if (message.author.id == message.mentions.members.first().id){respond('',`You can't perform this action on yourself.`, message.channel);return;}
 			const {ModeratorRoleID} = require('../config.json');
 			const checkmemberforroles = message.mentions.members.first()
-			if (checkmemberforroles.roles.cache.some(role => role.id === `${ModeratorRoleID}`)){respond('',`You can't perform that action on this user.`, message.channel);return;;return;}
+			//if (checkmemberforroles.roles.cache.some(role => role.id === `${ModeratorRoleID}`)){respond('',`You can't perform that action on this user.`, message.channel);return;;return;}
 			const user = message.mentions.members.first();
 			const userToBan = message.mentions.members.first()
 			const userid = message.mentions.members.first().id
