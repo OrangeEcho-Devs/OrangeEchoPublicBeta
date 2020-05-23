@@ -8,7 +8,7 @@ client.modcommands = new Discord.Collection();
 const cooldowns = new Discord.Collection();
 const {
 	PREFIX = '>',
-	BotManagerRoleID = '712098378908958750',
+	BotManagerRoleID,
 	ModeratorRoleID,
 	OwnerID,
 	MemberRoleID,
@@ -23,7 +23,7 @@ const {
 	MessageEmbed
 } = require('discord.js')
 
-version = '4.1.0'
+version = '5.0.0'
 codename = 'Beta'
 footertext = 'Version '+ version +'\nCodename: '+ codename
 errorcount = 0
