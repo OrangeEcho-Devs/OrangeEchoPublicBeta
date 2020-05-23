@@ -1,1 +1,1 @@
-worker: ae-bot.js
+worker: node ae-bot.js

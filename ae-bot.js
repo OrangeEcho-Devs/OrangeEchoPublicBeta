@@ -1,4 +1,4 @@
-const token = 'NzExODg1MzY2NzY4MDQyMDY0.Xsih_A.2-GkDgi0BF_w1Ep-kEKzxdZKCTs'
+//const token = 'NzExODg1MzY2NzY4MDQyMDY0.Xsih_A.2-GkDgi0BF_w1Ep-kEKzxdZKCTs'
 console.log('The bot is currently booting up. Please wait a moment.')
 fs = require('fs');
 Discord = require('discord.js');
@@ -768,4 +768,4 @@ function clean(text) {
 	  console.error('an error has occured', error);
 	  }}})
 //Login
-client.login(token);
+client.login(process.env.token);
