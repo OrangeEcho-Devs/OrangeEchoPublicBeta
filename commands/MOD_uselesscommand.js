@@ -12,7 +12,7 @@ module.exports = {
       const fs = require('fs');
       const channel = message.channel
       const reason = args.join(' ')
-      channel.send(`**Useless command, idk why it's here :think:**`);
+      channel.send(`Useless command, idk why it's here :think: `);
       },catch(error) {
           respond('Error', 'Something went wrong.\n'+error+`\nMessage: ${message}\nArgs: ${args}\n`, message.channel)
           errorlog(error)
