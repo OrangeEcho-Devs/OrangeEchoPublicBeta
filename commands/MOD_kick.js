@@ -22,7 +22,7 @@ module.exports = {
 			fs.appendFileSync('./logs/' + user.id + '-warnings.log', 'Kick\nReason: ' + auditreason +'\n\n');
 			fs.appendFileSync('./logs/' + user.id + '-modwarnings.log', 'Kick issued by '+ message.author.tag +'\nReason: ' + auditreason +'\n\n');
 			respond('⬅️ Kick','<@'+user.id+'> was kicked from the server. Goodbye and good riddance!\nReason: '+auditreason, message.channel)
-			channel.send('Goodbye and good riddance!');
+			channel.send(':wave: Goodbye and good riddance!');
 			respond('⬅️ Kick','You have been kicked from the server. You may rejoin at anytime.\n\nReason for kick: '+auditreason, user)
 			modaction(this.name, message.author.tag, message.channel.name, message.content)
 			user.kick({reason: `${message.author.tag} | ${auditreason}`})
