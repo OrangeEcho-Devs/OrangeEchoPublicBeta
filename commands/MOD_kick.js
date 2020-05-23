@@ -21,6 +21,7 @@ module.exports = {
 			fs.appendFileSync('./logs/' + user.id + '-warnings.log', 'Kick\nReason: ' + auditreason +'\n\n');
 			fs.appendFileSync('./logs/' + user.id + '-modwarnings.log', 'Kick issued by '+ message.author.tag +'\nReason: ' + auditreason +'\n\n');
 			respond('⬅️ Kick','<@'+user.id+'> was kicked from the server.\nReason: '+auditreason, message.channel)
+			respond('Goodbye','<@'+user.id+'> and good riddance', message.channel)
 			respond('⬅️ Kick','You have been kicked from the server. You may rejoin at anytime.\n\nReason for kick: '+auditreason, user)
 			modaction(this.name, message.author.tag, message.channel.name, message.content)
 			user.kick({reason: `${message.author.tag} | ${auditreason}`})
