@@ -23,6 +23,7 @@ module.exports = {
    			fs.appendFileSync('./logs/' + userid + '-modwarnings.log', 'Ban issued by '+ authorusername +'\nReason: ' + reason +'\n\n');
 			respond('Ban','<@'+userid+'> was banned.\nReason: '+reason, message.channel)
 			message.channel.send(':hammer: Banned. No more idiots fooling around in the server.')
+			message.channel.send('https://imgur.com/gallery/O3DHIA5')
 			respond('Banned','You were banned from the OrangeEcho server due to: '+ reason+'\n\nThis ban does not expire. ', user)
 			userToBan.ban({reason: `${message.author.tag}, ${reason}`})
 			modaction(this.name, message.author.tag, message.channel.name, message.content)
