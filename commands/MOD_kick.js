@@ -1,5 +1,4 @@
 const { prefix } = require('../config.json');
-const channel = message.channel
 
 module.exports = {
 	name: 'kick',
@@ -16,6 +15,7 @@ module.exports = {
 			const checkmemberforroles = message.mentions.members.first()
 			if (checkmemberforroles.roles.cache.some(role => role.id === `${ModeratorRoleID}`)){respond('',`You can't perform that action on this user.`, message.channel);return;;return;}
 			// Code hopefully works
+			const channel = message.channel
 			const user = message.mentions.members.first()
 			const reason = args.join(' ')
 			const auditreason = reason.replace(argarray[1], '')
