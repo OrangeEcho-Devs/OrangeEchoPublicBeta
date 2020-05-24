@@ -7,10 +7,10 @@ module.exports = {
 	mod:true,
     execute(message, args, client) {
         try {
-			//if (message.author.id == message.mentions.members.first().id){respond('',`You can't perform this action on yourself.`, message.channel);return;}
+			if (message.author.id == message.mentions.members.first().id){respond('',`You can't perform this action on yourself.`, message.channel);return;}
 			const {ModeratorRoleID} = require('../config.json');
 			const checkmemberforroles = message.mentions.members.first()
-			//if (checkmemberforroles.roles.cache.some(role => role.id === `${ModeratorRoleID}`)){respond('',`You can't perform that action on this user.`, message.channel);return;;return;}
+			if (checkmemberforroles.roles.cache.some(role => role.id === `${ModeratorRoleID}`)){respond('',`You can't perform that action on this user.`, message.channel);return;;return;}
 			const user = message.mentions.members.first();
 			const userToBan = message.mentions.members.first()
 			const userid = message.mentions.members.first().id
@@ -22,9 +22,7 @@ module.exports = {
 			fs.appendFileSync('./logs/' + userid + '-warnings.log', 'Ban\nReason: ' + reason +'\n\n');
    			fs.appendFileSync('./logs/' + userid + '-modwarnings.log', 'Ban issued by '+ authorusername +'\nReason: ' + reason +'\n\n');
 			respond('Ban','<@'+userid+'> was banned.\nReason: '+reason, message.channel)
-			message.channel.send(':banhammer: Banned. No more idiots fooling around in the server.')
-			message.channel.send('https://imgur.com/gallery/O3DHIA5')
-			respond('Banned','You were banned from the OrangeEcho server due to: '+ reason+'\n\nThis ban does not expire. ', user)
+			respond('Banned','You were banned from the Apple Explained server due to: '+ reason+'\n\nThis ban does not expire. ', user)
 			userToBan.ban({reason: `${message.author.tag}, ${reason}`})
 			modaction(this.name, message.author.tag, message.channel.name, message.content)
         	}catch(error) {

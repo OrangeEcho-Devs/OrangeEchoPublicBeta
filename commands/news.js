@@ -1,7 +1,7 @@
 module.exports = {
     name: 'news',
     aliases: ['newsletter','changelog'],
-    description: 'Shows new features and more about OrangeEcho Public Beta',
+    description: 'Shows new features and more about Apple Mod',
     usage: '',
     cooldown: 5,
       execute(message, args, client) {

@@ -1,8 +1,8 @@
 {
   "name": "orangeecho-beta",
-  "version": "5.0.0",
+  "version": "4.1.0",
   "description": "Discord bot for the OrangeEcho Discord server",
-  "main": "ae-bot.js",
+  "main": "bot.js",
   "dependencies": {
     "discord.js": "^12.1.1",
     "node-fetch": "^2.6.0"

@@ -1,4 +1,4 @@
-//const token = 'nope'
+const token = 'NzExODg1MzY2NzY4MDQyMDY0.Xsih_A.2-GkDgi0BF_w1Ep-kEKzxdZKCTs'
 console.log('The bot is currently booting up. Please wait a moment.')
 fs = require('fs');
 Discord = require('discord.js');
@@ -8,7 +8,7 @@ client.modcommands = new Discord.Collection();
 const cooldowns = new Discord.Collection();
 const {
 	PREFIX = '>',
-	BotManagerRoleID,
+	BotManagerRoleID = '712098378908958750',
 	ModeratorRoleID,
 	OwnerID,
 	MemberRoleID,
@@ -23,7 +23,7 @@ const {
 	MessageEmbed
 } = require('discord.js')
 
-version = '5.0.0'
+version = '4.1.0'
 codename = 'Beta'
 footertext = 'Version '+ version +'\nCodename: '+ codename
 errorcount = 0
@@ -455,7 +455,7 @@ const MemberJoinEmbed = new Discord.MessageEmbed()
 				return;
 			}
 			if(data.toString().includes(member.id)){
-				respond('Banned','You were banned from the OrangeEcho discord server. (PREBAN)', member)
+				respond('Banned','You were banned from the Apple Explained server. (PREBAN)', member)
 				respond('Banned',`${member.tag} was banned from the server. (PREBAN)`, guild.channels.cache.get(UserLog))
 				member.ban({reason: 'Prebanned.'});
 			}
@@ -517,7 +517,7 @@ client.on('message', message => {
 			respond('',`<@${message.author.id}>, watch your language. A warning has been logged.`, message.channel, 'FF0000')
     		const reason = message.content.replace(`${blocked}`, `**${blocked}**`)
 	    	fs.appendFileSync('./logs/' + message.author.id + '-warnings.log', 'Warning\nReason: Profanity (' + reason +')\n\n');
-    		fs.appendFileSync('./logs/' + message.author.id + '-modwarnings.log', 'Warning issued by OrangeEcho Public Beta \nReason: Profanity (' + message.content +')\n\n');
+    		fs.appendFileSync('./logs/' + message.author.id + '-modwarnings.log', 'Warning issued by AutomatedAppleModerator \nReason: Profanity (' + message.content +')\n\n');
 			respond('Profanity Filter 🗣️',`Hey <@${message.author.id}>, please watch your language next time. Punishment information was updated on your profile.\nYour message: ${reason}`, message.author)
 	}
 })
@@ -540,7 +540,7 @@ client.on('message', message => {
 			respond('',`<@${message.author.id}>, please don't talk about that here. A note has been logged.`, message.channel, 'FFFF00')
     		const reason = message.content.replace(`${blocked}`, `**${blocked}**`)
 	    	fs.appendFileSync('./logs/' + message.author.id + '-warnings.log', 'Note\nContent: Talking about a sensitive topic (' + reason +')\n\n');
-    		fs.appendFileSync('./logs/' + message.author.id + '-modwarnings.log', 'Note issued by OrangeEcho Public Beta \nContent: Talking about a sensitive topic (' + message.content +')\n\n');
+    		fs.appendFileSync('./logs/' + message.author.id + '-modwarnings.log', 'Note issued by AutomatedAppleModerator \nContent: Talking about a sensitive topic (' + message.content +')\n\n');
 			respond('Sensitive Topic Filter 🗣️',`Hey <@${message.author.id}>, please don't talk about this topic next time.\nYour message: ${reason}`, message.author)
 	}
 })
@@ -768,4 +768,4 @@ function clean(text) {
 	  console.error('an error has occured', error);
 	  }}})
 //Login
-client.login(process.env.token);
+client.login(token);
