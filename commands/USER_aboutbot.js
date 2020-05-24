@@ -15,8 +15,8 @@ module.exports = {
       .addFields(
         { name: 'Version', value: version, inline: false },
         { name: 'Author', value: 'Orange Group Tech', inline:false},
-        { name: 'Source', value: 'https://github.com/TechGeekGamer/Apple-Explained-Moderation-Bot', inline: false },
-        { name: 'Written in', value: '[Discord.JS V12](https://discord.js.org/)', inline: false },
+        { name: 'Source', value: 'https://github.com/OrangeEcho-Devs/OrangeEchoPublicBeta', inline: false },
+        { name: 'Written in', value: '[Discord.js v12](https://discord.js.org/)', inline: false },
 
 			)
       .setThumbnail(`${icon}`)
